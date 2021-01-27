@@ -39,7 +39,7 @@
 
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
-                        <thead class="thead-light">
+                        <thead class="thead-dark">
                             <tr>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Email</th>

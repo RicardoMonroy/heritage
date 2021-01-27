@@ -2316,6 +2316,8 @@ pre code
     display: block;
     overflow-x: auto;
 
+    background-color: #202020;
+
     width: 100%;
 
     -webkit-overflow-scrolling: touch;
@@ -5762,7 +5764,7 @@ input[type='button'].btn-block
     padding: 1.25rem 1.5rem;
 
     border-bottom: 1px solid rgba(0, 0, 0, .05);
-    background-color: #fff;
+    background-color: #202020;
 }
 .card-header:first-child
 {
@@ -5778,7 +5780,7 @@ input[type='button'].btn-block
     padding: 1.25rem 1.5rem;
 
     border-top: 1px solid rgba(0, 0, 0, .05);
-    background-color: #fff;
+    background-color: #202020;
 }
 .card-footer:last-child
 {

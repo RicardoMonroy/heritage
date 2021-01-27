@@ -229,7 +229,7 @@
             <div class="col-lg-6 pr-5 mb-5 mb-lg-0 wow fadeInLeft">
                 <div class="rare-box"></div>
                 <img src="agency/img/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" class="about-img-small position-relative w-100" alt="">
-                <span>Photo by <a href="https://unsplash.com/@alimorshedlou?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ali Morshedlou</a> on <a href="https://unsplash.com/s/photos/investment?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+                {{-- <span>Photo by <a href="https://unsplash.com/@alimorshedlou?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ali Morshedlou</a> on <a href="https://unsplash.com/s/photos/investment?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> --}}
             </div>
             <div class="col-lg-6 pl-6">
                 <div class="main-title text-lg-left offset-md-1 mb-0 wow fadeInUp" data-wow-delay="300ms">
@@ -264,7 +264,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-3 p-0">
+            <div class="col-md-3 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->
@@ -281,7 +281,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-md-3 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->
@@ -298,7 +298,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-md-3 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->
@@ -315,7 +315,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 p-0">
+            <div class="col-md-3 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->

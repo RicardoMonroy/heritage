@@ -2,47 +2,22 @@
 
 @section('content')
 <!-- Header start -->
-{{-- <section class="top-header cursor-light">
-    <div class="row no-gutters">
-        <div class="col-6 col-lg-4">
-            <div class="slider-icons">
-                <ul class="slider-social banner-social d-flex">
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-facebook-f"></i> </a></li>
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-twitter"></i>  </a></li>
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-linkedin-in"></i> </a></li>
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-instagram"></i> </a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-6 col-lg-4 d-flex align-items-center justify-content-end justify-content-lg-center">
-            <a class="menu_bars menu-bars-setting sidemenu_toggle link mr-3 mr-lg-0">
-                <div class="menu-lines">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </a>
-        </div>
-        <div class="col-4 d-flex justify-content-end">
-            <a href="javascript:void(0)" class="btn-setting link btn-hvr-up btn-hvr-whatsapp color-white mr-lg-4 d-none d-lg-inline-block"><i class="fab fa-whatsapp"></i> +1 631 112 1134</a>
-        </div>
-    </div>
-</section> --}}
 <header class="cursor-light">
-    <nav class="navbar navbar-top-default navbar-expand-lg nav-three-circles bottom-nav nav-box-shadow no-animation">
+    <!-- Creé una nueva clase llamada navbar-top-blog y la sustituí por navbar-top-default -->
+    <nav class="navbar navbar-top-blog navbar-expand-lg nav-three-circles bottom-nav nav-box-shadow no-animation">
         <div class="container-fluid">
-            <a class="logo ml-lg-1" href="javascript:void(0)">
+            <a class="logo ml-lg-1" href="{{ route('welcome') }}">
                 <img src="agency/img/LogoH.png" class="logo-default" alt="logo" title="Logo">
             </a>
             <div class="collapse navbar-collapse d-none d-lg-block">
                 <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"> <a href="#home" class="scroll nav-link link">home</a></li>
-                    <li class="nav-item"> <a href="#about" class="scroll nav-link link">about</a></li>
-                    <li class="nav-item"> <a href="#business" class="scroll nav-link link">business</a></li>
-                    <li class="nav-item"> <a href="#team" class="scroll nav-link link">equipo</a></li>
-                    {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clients</a></li> --}}
-                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">blog</a></li>
-                    <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contact</a></li>
+                    {{-- <li class="nav-item"> <a href="{{ route('welcome') }}" class="scroll nav-link link">home</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#about" class="scroll nav-link link">about</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#business" class="scroll nav-link link">business</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#team" class="scroll nav-link link">equipo</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#clients" class="scroll nav-link link">clients</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#blog" class="scroll nav-link link">blog</a></li>
+                    <li class="nav-item"> <a href="index.html#contact" class="scroll nav-link link">contact</a></li> --}}
                 </ul>
             </div>
             <a href="javascript:void(0)" class="nav-btn-number btn-setting btn-hvr-up btn-hvr-whatsapp color-white mr-lg-3"><i class="fab fa-whatsapp"></i> +1 631 112 1134</a>
@@ -78,17 +53,17 @@
         </div>
         <div class="inner-wrapper justify-content-center">
             <div class="col-md-12 text-center">
-                <a href="javascript:void(0)" class="logo-full mb-4"><img src="agency/img/LogoH.png" alt=""></a>
+                <a href="javascript:void(0)" class="logo-full mb-4"><img src="ad-agency/img/logo-pure-white.png" alt=""></a>
             </div>
             <nav class="side-nav m-0">
                 <ul class="navbar-nav flex-lg-row">
-                    <li class="nav-item"> <a href="#home" class="scroll nav-link link">home</a></li>
-                    <li class="nav-item"> <a href="#about" class="scroll nav-link link">about</a></li>
-                    <li class="nav-item"> <a href="#business" class="scroll nav-link link">business</a></li>
-                    <li class="nav-item"> <a href="#team" class="scroll nav-link link">equipo</a></li>
-                    {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clients</a></li> --}}
-                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">blog</a></li>
-                    <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contact</a></li>
+                    {{-- <li class="nav-item"> <a href="{{ route('welcome') }}" class="scroll nav-link link">home</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#about" class="scroll nav-link link">about</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#business" class="scroll nav-link link">business</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#team" class="scroll nav-link link">equipo</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#clients" class="scroll nav-link link">clients</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#blog" class="scroll nav-link link">blog</a></li>
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#contact" class="scroll nav-link link">contact</a></li> --}}
                 </ul>
             </nav>
 
@@ -107,248 +82,71 @@
 </header>
 <!-- Header end -->
 
-<!-- Pricing start -->
-<section id="pricing" class="bg-light-gray pricing-padding bg-dark2">
+<!--About start-->
+<section class="about overflow-visible bg-dark1" id="blog">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="main-title wow fadeIn" data-wow-delay="300ms">
-                    {{-- <h5> Lorem ipsum dolor sit amet </h5> --}}
-                    <h2 class="mb-0">Permítenos <span class="color-terracota"> conocerte</span> </h2>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-66px mt-xs-4rem">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-xs-5 wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">¿QUÉ OBJETIVOS BUSCAS?</h4>
+            <div class="col-lg-10">
+                <div class="content-cards">
+                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                        <span class="wow fadeInUp color-pink">Design</span>
+                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
+                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
+                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
+
+                        <div class="text-lg-right">
+                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
                         </div>
                     </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>19<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Individuales o familiares</p>
-                        <p>Tranquilidad y legado</p>
-                        <p>Dinámicos conforme la etapa de tu vida</p>
-                    </div>
-                    <br>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-xs-5 wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">¿CÓMO LLEGAR A ESOS OBJETIVOS?</h4>
+                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                        <span class="wow fadeInUp color-pink">Design</span>
+                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
+                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
+                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
+
+                        <div class="text-lg-right">
+                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
                         </div>
                     </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>19<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Posiciones de corto o largo plazo</p>
-                        <p>Análisis Macro</p>
-                        <p>Oportunidades asimétricas</p>
-                    </div>
-                    <br><br>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 text-center wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">aLINEACIÓN DE OBJETIVOS</h4>
+                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                        <span class="wow fadeInUp color-pink">World</span>
+                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
+                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
+                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
+
+                        <div class="text-lg-right">
+                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
                         </div>
                     </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>49<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Responsabilidad y obsesión por construir</p>
-                        <p>Ejecución con expertos</p>
-                        <p>Seguimiento y adaptación a entornos agresivos</p>
+                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                        <span class="wow fadeInUp color-pink">World</span>
+                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
+                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
+                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
+
+                        <div class="text-lg-right">
+                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
+                        </div>
                     </div>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-pink btn-hvr-white">learn more</a>
-                    </div> --}}
                 </div>
+            </div>
+            <div class="col-lg-2">
+                <h6 class="wow fadeInRight color-white font-weight-light" data-wow-delay="400ms"> About </h6>
+                <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum</p>
+                <hr class="bg-white">
+                <h6 class="wow fadeInRight color-white font-weight-light" data-wow-delay="400ms"> Tags </h6>
+                <div class="content-tags">
+                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">Design</span></a>
+                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">Journey</span></a>
+                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">LifeStype</span></a>
+                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">World</span></a>
+                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">Foods & Drinks</span></a>
+                </div>
+                <hr class="bg-white">
             </div>
         </div>
     </div>
 </section>
-<!-- Pricing ends -->
-<!-- Pricing start -->
-<section id="pricing" class="bg-light-gray pricing-padding bg-dark2">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="main-title wow fadeIn" data-wow-delay="300ms">
-                    {{-- <h5> Lorem ipsum dolor sit amet </h5> --}}
-                    <h2 class="mb-0">Permítenos <span class="color-terracota"> conocerte</span> </h2>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-66px mt-xs-4rem">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-xs-5 wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">¿QUÉ OBJETIVOS BUSCAS?</h4>
-                        </div>
-                    </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>19<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Individuales o familiares</p>
-                        <p>Tranquilidad y legado</p>
-                        <p>Dinámicos conforme la etapa de tu vida</p>
-                    </div>
-                    <br>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-xs-5 wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">¿CÓMO LLEGAR A ESOS OBJETIVOS?</h4>
-                        </div>
-                    </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>19<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Posiciones de corto o largo plazo</p>
-                        <p>Análisis Macro</p>
-                        <p>Oportunidades asimétricas</p>
-                    </div>
-                    <br><br>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 text-center wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">aLINEACIÓN DE OBJETIVOS</h4>
-                        </div>
-                    </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>49<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Responsabilidad y obsesión por construir</p>
-                        <p>Ejecución con expertos</p>
-                        <p>Seguimiento y adaptación a entornos agresivos</p>
-                    </div>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-pink btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Pricing ends -->
-<!-- Pricing start -->
-<section id="pricing" class="bg-light-gray pricing-padding bg-dark2">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="main-title wow fadeIn" data-wow-delay="300ms">
-                    {{-- <h5> Lorem ipsum dolor sit amet </h5> --}}
-                    <h2 class="mb-0">Permítenos <span class="color-terracota"> conocerte</span> </h2>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-66px mt-xs-4rem">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-xs-5 wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">¿QUÉ OBJETIVOS BUSCAS?</h4>
-                        </div>
-                    </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>19<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Individuales o familiares</p>
-                        <p>Tranquilidad y legado</p>
-                        <p>Dinámicos conforme la etapa de tu vida</p>
-                    </div>
-                    <br>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-xs-5 wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">¿CÓMO LLEGAR A ESOS OBJETIVOS?</h4>
-                        </div>
-                    </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>19<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Posiciones de corto o largo plazo</p>
-                        <p>Análisis Macro</p>
-                        <p>Oportunidades asimétricas</p>
-                    </div>
-                    <br><br>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 text-center wow fadeInUp">
-                <div class="pricing-item hvr-bg-terracota">
-                    <div class="price-box clearfix">
-                        <div class="price_title">
-                            <h4 class="text-capitalize">aLINEACIÓN DE OBJETIVOS</h4>
-                        </div>
-                    </div>
-                    <br>
-                    {{-- <div class="price">
-                        <h2 class="position-relative"><span class="dollar">$</span>49<span class="month">/ month</span></h2>
-                    </div> --}}
-                    <div class="price-description">
-                        <p>Responsabilidad y obsesión por construir</p>
-                        <p>Ejecución con expertos</p>
-                        <p>Seguimiento y adaptación a entornos agresivos</p>
-                    </div>
-                    {{-- <div class="text-center">
-                        <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-pink btn-hvr-white">learn more</a>
-                    </div> --}}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Pricing ends -->
+<!--About end-->
 
 @endsection
