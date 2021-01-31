@@ -13,9 +13,12 @@ class SliderTableSeeder extends Seeder
     public function run()
     {
         DB::table('sliders')->insert([
-            'brand' => 'Heritage',
-            'slogan' => 'Growth Capital',
-            'banner' => 'agency/img/banner.jpeg'
+            'banner' => 'Images/banner.jpeg',
+            'facebook' => '',
+            'twitter' => '',
+            'youtube' => '',
+            'linkedin' => '',
+            'instagram' => ''
         ]);
     }
 }

@@ -16,9 +16,12 @@ class CreateSlidersTable extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
 
-            $table->string('brand');
-            $table->string('slogan');
             $table->string('banner');
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('instagram')->nullable();
 
             $table->timestamps();
         });

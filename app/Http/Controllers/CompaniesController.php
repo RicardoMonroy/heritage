@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Slider;
+use App\Company;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class SliderController extends Controller
+class CompaniesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,9 @@ class SliderController extends Controller
      */
     public function index()
     {
-        //
+        $companies = Company::all();
+
+        return view('companies.index', compact('companies'));
     }
 
     /**
@@ -58,9 +59,9 @@ class SliderController extends Controller
      */
     public function edit($id)
     {
-        $slider = Slider::find($id);
+        $company = Company::find($id);
 
-        return view('slider.edit', compact('slider'));
+        return view('companies.edit', compact('company'));
     }
 
     /**
@@ -72,26 +73,7 @@ class SliderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $slider = Slider::find($id);
-        $slider->update($request->all());
-
-        if( $request->picture ){
-            $file = $request->file('picture');
-            $name = str_replace(' ','-', $file->getClientOriginalName());
-            $path = 'Images/' . $name;
-            Storage::putFileAs('/public/' . 'Images/', $file, $name );
-            $slider::whereId($id)->update([
-                'banner' => $path,
-                'facebook' => $request->facebook,
-                'twitter' => $request->twitter,
-                'youtube' => $request->youtube,
-                'linkedin' => $request->linkedin,
-                'instagram' => $request->instagram
-            ]);
-        }
-
-        // Toastr::success('Se actualizó con éxito','Bien');
-        return redirect()->route('slider.edit', compact('slider'));
+        //
     }
 
     /**

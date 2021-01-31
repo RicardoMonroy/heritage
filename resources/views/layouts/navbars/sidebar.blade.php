@@ -83,23 +83,22 @@
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('slider.edit', 1) }}">
+                        <i class="ni ni-album-2 text-orange"></i> {{ __('Slider & Social') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('about.edit', 1) }}">
+                        <i class="ni ni-paper-diploma text-blue"></i> {{ __('About') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('companies.index') }}">
+                        <i class="ni ni-building text-info"></i> {{ __('Empresas') }}
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-pin-3 text-orange"></i> {{ __('Maps') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-key-25 text-info"></i> {{ __('Login') }}
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
                     </a>

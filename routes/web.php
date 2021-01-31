@@ -25,6 +25,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('permissions', 'PermissionController');
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'ProfileController@edit']);
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
-	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+    Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
+
+    Route::resource('slider', 'SliderController');
+    Route::resource('about', 'AboutController');
+    Route::resource('companies', 'CompaniesController');
 });
 

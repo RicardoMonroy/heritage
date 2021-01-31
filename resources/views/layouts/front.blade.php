@@ -11,7 +11,7 @@
     <!-- Page Title -->
     <title>{{ config('app.name', 'Heritage Landingpage') }}</title>
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('agency/img/favicon.ico') }}">
+    <link rel="icon" href="{{ asset('agency/img/favicon.png') }}">
     <!-- Bundle -->
     <link rel="stylesheet" href="{{ asset('agency/vendor/css/bundle.min.css') }}">
     <!-- Plugin Css -->
@@ -61,11 +61,21 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 text-center">
                 <ul class="footer-icons mb-4">
-                    <li><a href="#" class="wow fadeInUp facebook"><i class="fab fa-facebook-f"></i> </a> </li>
-                    <li><a href="#" class="wow fadeInDown twitter"><i class="fab fa-twitter"></i> </a> </li>
-                    <li><a href="#" class="wow fadeInUp google"><i class="fab fa-google"></i> </a> </li>
-                    <li><a href="#" class="wow fadeInDown linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
-                    <li><a href="#" class="wow fadeInUp instagram"><i class="fab fa-instagram"></i> </a> </li>
+                    @if (isset($facebook))
+                        <li><a href="{{ $facebook }}" target="_blank" class="wow fadeInUp facebook"><i class="fab fa-facebook-f"></i> </a> </li>
+                    @endif
+                    @if (isset($twitter))
+                        <li><a href="{{ $twitter }}" target="_blank" class="wow fadeInDown twitter"><i class="fab fa-twitter"></i> </a> </li>
+                    @endif
+                    @if (isset($youtube))
+                        <li><a href="{{ $youtube }}" target="_blank" class="wow fadeInUp google"><i class="fab fa-youtube"></i> </a> </li>
+                    @endif
+                    @if (isset($linkedin))
+                        <li><a href="{{ $linkedin }}" target="_blank" class="wow fadeInDown linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
+                    @endif
+                    @if (isset($instagram))
+                        <li><a href="{{ $instagram }}" target="_blank" class="wow fadeInUp instagram"><i class="fab fa-instagram"></i> </a> </li>
+                    @endif
                     {{-- <li><a href="#" class="wow fadeInDown pinterest"><i class="fab fa-pinterest-p"></i> </a> </li> --}}
                     <li><a href="{{ route('login') }}" class="wow fadeInDown pinterest"><i class="fas fa-sign-in-alt"></i> </a> </li>
                 </ul>

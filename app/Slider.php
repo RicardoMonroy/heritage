@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Slider extends Model
 {
     protected $fillable = ([
-        'brand',
-        'slogan',
-        'banner'
+        'banner',
+        'facebook',
+        'twitter',
+        'youtube',
+        'linkedin',
+        'instagram'
     ]);
 }

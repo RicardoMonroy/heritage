@@ -4,14 +4,12 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class About extends Model
+class Company extends Model
 {
     protected $fillable = ([
+        'name',
         'picture',
-        'h5',
-        'h2',
-        'p1',
-        'p2',
-        'p3'
+        'description',
+        'url'
     ]);
 }

@@ -2344,7 +2344,7 @@ pre code
     color: #8898aa;
     border: 1px solid #cad1d7;
     border-radius: .375rem;
-    background-color: #fff;
+    background-color:#343434;
     background-clip: padding-box;
     box-shadow: none;
 }
@@ -2365,7 +2365,7 @@ pre code
     color: #8898aa;
     border-color: rgba(50, 151, 211, .25);
     outline: 0;
-    background-color: #fff;
+    background-color: #474747;
     box-shadow: none, none;
 }
 .form-control:-ms-input-placeholder
@@ -3057,14 +3057,14 @@ fieldset:disabled a.btn
 {
     color: #fff;
     border-color: #2dce89;
-    background-color: #2dce89;
+    background-color: #343434;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
 .btn-success:hover
 {
     color: #fff;
     border-color: #2dce89;
-    background-color: #2dce89;
+    background-color: #474747;
 }
 .btn-success:focus,
 .btn-success.focus
@@ -5728,6 +5728,7 @@ input[type='button'].btn-block
 .card-body
 {
     padding: 1.5rem;
+    background-color: #202020;
 
     flex: 1 1 auto;
 }

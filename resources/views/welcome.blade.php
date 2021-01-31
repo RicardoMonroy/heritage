@@ -1,4 +1,11 @@
-@extends('layouts.front', ['class' => 'bg-default'])
+@extends('layouts.front', [
+    'class' => 'bg-default',
+    'facebook' => $slider->facebook,
+    'twitter' => $slider->twitter,
+    'youtube' => $slider->youtube,
+    'linkedin' => $slider->linkedin,
+    'instagram' => $slider->instagram
+    ])
 
 @section('content')
 <!-- Header start -->
@@ -118,7 +125,7 @@
                 <!-- SLIDE 1 -->
                 <li data-index="rs-36" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300" data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- LAYERS -->
-                    <img src="{{ $slider->banner }}"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" alt="slider-image" data-no-retina>
+                    <img src="{{ asset('storage/'.$slider->banner) }}"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" alt="slider-image" data-no-retina>
                     <div class="banner-overlay"></div>
                     <!-- LAYERS -->
                     {{-- <div class="rs-background-video-layer"
@@ -228,24 +235,25 @@
         <div class="row">
             <div class="col-lg-6 pr-5 mb-5 mb-lg-0 wow fadeInLeft">
                 <div class="rare-box"></div>
-                <img src="agency/img/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" class="about-img-small position-relative w-100" alt="">
+                <img src="{{ asset('storage/'.$about->picture) }}" class="about-img-small position-relative w-100" alt="">
                 {{-- <span>Photo by <a href="https://unsplash.com/@alimorshedlou?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Ali Morshedlou</a> on <a href="https://unsplash.com/s/photos/investment?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> --}}
             </div>
             <div class="col-lg-6 pl-6">
                 <div class="main-title text-lg-left offset-md-1 mb-0 wow fadeInUp" data-wow-delay="300ms">
-                    <h5 class="wow fadeInUp" data-wow-delay="300ms"> Heritage es una firma de asesoría financiera y legal a </h5>
-                    <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms"> empresas, inversionistas institucionales, fondos y financial sponsors</h2>
-                    <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">en estructuración de financiamiento, IPOs, procesos de M&A, valuaciones y reestructuras y estrategias de optimización, valuación y cobertura de riesgos de tipo de cambio y tasa de interés con productos derivados.</p>
-                    <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Nuestra especialidad se centra en la estructuración de productos financieros que atiendan a las necesidades de fondeo y cobertura de las empresas. </p>
+                    <h5 class="wow fadeInUp" data-wow-delay="300ms">{{ $about->h5 }}</h5>
+                    <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms">{{ $about->h2 }}</h2>
+                    <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">{{ $about->p1 }}</p>
+                    <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">{{ $about->p2 }}</p>
+                    <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">{{ $about->p3 }}</p>
 
-                    <ul class="pb-5 text-left wow fadeInUp" data-wow-delay="600ms">
+                    {{-- <ul class="pb-5 text-left wow fadeInUp" data-wow-delay="600ms">
                         <li>Deuda.</li>
                         <li>Capital.</li>
                         <li>M&A.</li>
                         <li>FX & IR.</li>
-                    </ul>
+                    </ul> --}}
 
-                    <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-terracota btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">leer más</a>
+                    {{-- <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-terracota btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">leer más</a> --}}
                 </div>
             </div>
         </div>
@@ -264,24 +272,26 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-6 p-0">
-                <div class="card flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front"><!-- frente de la tarjeta -->
-                            <img src="{{ asset('agency/img/Business-Broad.png') }}" alt="imagen"><!-- Imagen frontal -->
-                        </div>
-                        <div class="flip-card-back"><!-- reverso de la tarjeta -->
-                            <div class="row no-gutters">
-                                <div class="card-body">
-                                    <h5 class="card-title">Broad</h5>
-                                    <p class="card-text pl-2 mt-2">Ingeniería Financiera dedada a diseñar y estructurar nuevos productos financieros que atiendan a las necisidades de fondeo y cobertura de empresas Mexicanas. Nos especializamos en ofecer servicios de fusiones, adquisiciones, banca de inversión y valuación o estructuración de diversas coberturas con derivandos para cualquier activo subyacente.</p>
+            @foreach ($companies as $company)
+                <div class="col-md-3 col-sm-6 p-0">
+                    <div class="card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front"><!-- frente de la tarjeta -->
+                                <img src="{{ asset('storage/'.$company->picture ) }}" alt="imagen"><!-- Imagen frontal -->
+                            </div>
+                            <div class="flip-card-back"><!-- reverso de la tarjeta -->
+                                <div class="row no-gutters">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $company->name }}</h5>
+                                        <p class="card-text pl-2 mt-2">{{ $company->description }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3 col-sm-6 p-0">
+            @endforeach
+            {{-- <div class="col-md-3 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->
@@ -331,7 +341,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
