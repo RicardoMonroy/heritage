@@ -72,6 +72,7 @@ class AboutController extends Controller
      */
     public function update(Request $request, $id)
     {
+        dd($id);
         $about = About::find($id);
         $about->update($request->all());
 

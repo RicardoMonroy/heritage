@@ -36,7 +36,7 @@
                 <div class="card-body">
                     <h6 class="heading-small text-muted mb-4">Información de la sección</h6>
                     <div class="pl-lg-4">
-                        <form action="{{ route('companies.update', 1) }}" method="post" enctype="multipart/form-data" class="form-horizontal">
+                        <form action="{{ route('companies.update', $company->id) }}" method="post" enctype="multipart/form-data" class="form-horizontal">
                             @csrf
                             @method('PUT')
                             <div class="row">
