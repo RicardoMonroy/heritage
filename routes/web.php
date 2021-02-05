@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'LandingController@welcome')->name('welcome');
 Route::get('/blog', 'LandingController@blog')->name('blog');
+// Route::get('/scraping', 'ScrapingController@index');
 
 Auth::routes();
 
@@ -30,5 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('slider', 'SliderController');
     Route::resource('about', 'AboutController');
     Route::resource('companies', 'CompaniesController');
+    Route::resource('meetyous', 'MeetyouController');
+    Route::resource('contact', 'ContactController');
 });
 

@@ -98,6 +98,16 @@
                         <i class="ni ni-building text-info"></i> {{ __('Empresas') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('meetyous.index') }}">
+                        <i class="ni ni-bulb-61 text-yellow"></i> {{ __('Conocerte') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('contact.edit', 1) }}">
+                        <i class="ni ni-email-83 text-red"></i> {{ __('Contacto') }}
+                    </a>
+                </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
