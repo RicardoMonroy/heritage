@@ -3695,8 +3695,8 @@ ul.rounded li::before {
     transform: translate(-50%,-50%); */
     background: #000;
     /* width: 360px; */
-    height: 400px;
-    margin: 0 1.3rem;
+    height: 450px;
+    margin: 0 .5rem;
     overflow: hidden;
     border-radius: .5rem;
 }
