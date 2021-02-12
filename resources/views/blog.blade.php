@@ -90,8 +90,15 @@
                 <div class="content-cards">
                     @foreach ($newsF as $new)
                         <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                            <span class="wow fadeInUp color-pink">El Financiero</span>
-                            <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $new['date'] }} </h6>
+                            <div class="content_header">
+                                <div class="header_card">
+                                    <span class="wow fadeInUp color-pink">El Financiero</span>
+                                    <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $new['date'] }} </h6>
+                                </div>
+                                <div class="content_logo">
+                                    <img src="{{ asset('agency') }}/img/logo_financiero.jpg" width="32px" alt="">
+                                </div>
+                            </div>
                             <h5 class="color-white wow fadeInUp" data-wow-delay="300ms"> {{ $new['title'] }}</h5>
                             <!-- <p class="pb-4 wow fadeInUp" data-wow-delay="500ms"></p> -->
 
@@ -112,8 +119,15 @@
                 <div class="content-cards">
                     @foreach ($newsE as $new)
                         <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                            <span class="wow fadeInUp color-pink">El Economista</span>
-                            <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $new['author'] }} </h6>
+                            <div class="content_header">
+                                <div class="header_card">
+                                    <span class="wow fadeInUp color-pink">El Economista</span>
+                                    <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $new['author'] }} </h6>
+                                </div>                            
+                                <div class="content_logo">
+                                    <img src="{{ asset('agency') }}/img/logo_economista.jpg" width="30px" alt="">
+                                </div>
+                            </div>
                             <h5 class="color-white wow fadeInUp" data-wow-delay="300ms"> {{ $new['title'] }}</h5>
                             <!-- <p class="pb-4 wow fadeInUp" data-wow-delay="500ms"></p> -->
 
@@ -131,7 +145,7 @@
                 </div>
             </div>
             <div class="col-lg-2">
-                <h6 class="wow fadeInRight color-white font-weight-light" data-wow-delay="400ms"> About </h6>
+                <h6 class="wow fadeInRight color-white font-weight-light" data-wow-delay="400ms"> Acerca de </h6>
                 <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum</p>
                 <hr class="bg-white">
                 <h6 class="wow fadeInRight color-white font-weight-light" data-wow-delay="400ms"> Tags </h6>
