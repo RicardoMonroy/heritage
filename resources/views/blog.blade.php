@@ -86,7 +86,7 @@
 <section class="about overflow-visible bg-dark1" id="blog">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-lg-6">
                 <div class="content-cards">
                     @foreach ($newsF as $new)
                         <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
@@ -115,7 +115,7 @@
                     @endforeach
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-6">
                 <div class="content-cards">
                     @foreach ($newsE as $new)
                         <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
@@ -143,20 +143,6 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
-            <div class="col-lg-2">
-                <h6 class="wow fadeInRight color-white font-weight-light" data-wow-delay="400ms"> Acerca de </h6>
-                <p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum</p>
-                <hr class="bg-white">
-                <h6 class="wow fadeInRight color-white font-weight-light" data-wow-delay="400ms"> Tags </h6>
-                <div class="content-tags">
-                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">Design</span></a>
-                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">Journey</span></a>
-                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">LifeStype</span></a>
-                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">World</span></a>
-                    <a class="bg-pink btn-tag btn-hvr-up link btn-hvr-yellow"><span class="color-white">Foods & Drinks</span></a>
-                </div>
-                <hr class="bg-white">
             </div>
         </div>
     </div>
