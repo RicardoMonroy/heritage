@@ -71,7 +71,7 @@
                         <li><a href="{{ $youtube }}" target="_blank" class="wow fadeInUp google"><i class="fab fa-youtube"></i> </a> </li>
                     @endif
                     @if (isset($linkedin))
-                        <li><a href="{{ $linkedin }}" target="_blank" class="wow fadeInDown linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
+                        <li><a href="{{ $linkedin }}" target="_blank" class="wow fadeInDown linkedin"><i class="fab fa-linkedin"></i> </a> </li>
                     @endif
                     @if (isset($instagram))
                         <li><a href="{{ $instagram }}" target="_blank" class="wow fadeInUp instagram"><i class="fab fa-instagram"></i> </a> </li>
@@ -79,7 +79,7 @@
                     {{-- <li><a href="#" class="wow fadeInDown pinterest"><i class="fab fa-pinterest-p"></i> </a> </li> --}}
                     <li><a href="{{ route('login') }}" class="wow fadeInDown pinterest"><i class="fas fa-sign-in-alt"></i> </a> </li>
                 </ul>
-                <p class="copyrights mt-2 mb-2">&copy; {{ now()->year }} Heritage. Made with love by <a href="#">Tooring</a></p>
+                <p class="copyrights mt-2 mb-2">&copy; {{ now()->year }} Heritage. Hecho con <span style="color:red;">&#10084;</span> por <a href="#">Tooring</a></p>
             </div>
         </div>
     </div>
