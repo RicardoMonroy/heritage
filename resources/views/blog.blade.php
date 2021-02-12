@@ -110,7 +110,7 @@
             </div>
             <div class="col-lg-5">
                 <div class="content-cards">
-                    @foreach ($news as $job)
+                    @foreach ($newsF as $job)
                         <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
                             <span class="wow fadeInUp color-pink">El Economista</span>
                             <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $job['date'] }} </h6>
