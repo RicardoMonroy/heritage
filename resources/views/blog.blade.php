@@ -11,13 +11,13 @@
             </a>
             <div class="collapse navbar-collapse d-none d-lg-block">
                 <ul class="nav navbar-nav mx-auto">
-                    {{-- <li class="nav-item"> <a href="{{ route('welcome') }}" class="scroll nav-link link">home</a></li>
+                    <!-- <li class="nav-item"> <a href="{{ route('welcome') }}" class="scroll nav-link link">home</a></li>
                     <li class="nav-item"> <a href="{{ route('welcome') }}#about" class="scroll nav-link link">about</a></li>
                     <li class="nav-item"> <a href="{{ route('welcome') }}#business" class="scroll nav-link link">business</a></li>
                     <li class="nav-item"> <a href="{{ route('welcome') }}#team" class="scroll nav-link link">equipo</a></li>
-                    <li class="nav-item"> <a href="{{ route('welcome') }}#clients" class="scroll nav-link link">clients</a></li>
-                    <li class="nav-item"> <a href="{{ route('welcome') }}#blog" class="scroll nav-link link">blog</a></li>
-                    <li class="nav-item"> <a href="index.html#contact" class="scroll nav-link link">contact</a></li> --}}
+                    <li class="nav-item"> <a href="{{ route('welcome') }}#clients" class="scroll nav-link link">clients</a></li> -->
+                    <li class="nav-item"> <a href="{{ route('blog') }}#blog" class="scroll nav-link link">Noticias</a></li>
+                    <!-- <li class="nav-item"> <a href="index.html#contact" class="scroll nav-link link">contact</a></li> -->
                 </ul>
             </div>
             <a href="javascript:void(0)" class="nav-btn-number btn-setting btn-hvr-up btn-hvr-whatsapp color-white mr-lg-3"><i class="fab fa-whatsapp"></i> +1 631 112 1134</a>
@@ -86,48 +86,48 @@
 <section class="about overflow-visible bg-dark1" id="blog">
     <div class="container">
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-5">
                 <div class="content-cards">
-                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <span class="wow fadeInUp color-pink">Design</span>
-                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
-                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
-                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
+                    @foreach ($newsF as $new)
+                        <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                            <span class="wow fadeInUp color-pink">El Financiero</span>
+                            <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $new['date'] }} </h6>
+                            <h5 class="color-white wow fadeInUp" data-wow-delay="300ms"> {{ $new['title'] }}</h5>
+                            <!-- <p class="pb-4 wow fadeInUp" data-wow-delay="500ms"></p> -->
 
-                        <div class="text-lg-right">
-                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
+                            <div class="text-lg-right">
+                                <a href="https://www.elfinanciero.com.mx{{ $new['url'] }}" 
+                                    target="_blank" 
+                                    class="btn-setting color-white btn-hvr-up btn-hvr-pink link wow fadeInUp" 
+                                    data-wow-delay="700ms"
+                                    style="padding: 4px 20px !important;">
+                                    Read More
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <span class="wow fadeInUp color-pink">Design</span>
-                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
-                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
-                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
+                    @endforeach
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="content-cards">
+                    @foreach ($news as $job)
+                        <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
+                            <span class="wow fadeInUp color-pink">El Economista</span>
+                            <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $job['date'] }} </h6>
+                            <h5 class="color-white wow fadeInUp" data-wow-delay="300ms"> {{ $job['title'] }}</h5>
+                            <!-- <p class="pb-4 wow fadeInUp" data-wow-delay="500ms"></p> -->
 
-                        <div class="text-lg-right">
-                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
+                            <div class="text-lg-right">
+                                <a href="https://www.elfinanciero.com.mx{{ $job['url'] }}" 
+                                    target="_blank" 
+                                    class="btn-setting color-white btn-hvr-up btn-hvr-pink link wow fadeInUp" 
+                                    data-wow-delay="700ms"
+                                    style="padding: 4px 20px !important;">
+                                    Read More
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <span class="wow fadeInUp color-pink">World</span>
-                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
-                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
-                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
-
-                        <div class="text-lg-right">
-                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
-                        </div>
-                    </div>
-                    <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
-                        <span class="wow fadeInUp color-pink">World</span>
-                        <h4 class="color-white wow fadeInUp" data-wow-delay="300ms"> Post title </h4>
-                        <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> Nov 12 </h6>
-                        <p class="pb-4 wow fadeInUp" data-wow-delay="500ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue diam, accumsan vitae justo non, euismod aliquam lectus. Etiam elementum tortor quis risus posuere, in cursus arcu lobortis.</p>
-
-                        <div class="text-lg-right">
-                            <a href="javascript:void(0)" class="btn-setting color-black btn-hvr-up btn-yellow btn-hvr-pink text-white link wow fadeInUp" data-wow-delay="700ms">learn more</a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
             <div class="col-lg-2">
