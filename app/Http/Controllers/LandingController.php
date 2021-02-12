@@ -22,21 +22,37 @@ class LandingController extends Controller
 
     public function blog(Client $client)
     {
+        // El Financiero web scraping
         $crawlerF = $client->request('GET', 'https://www.elfinanciero.com.mx/nacional');
 
-        $new = [];
+        $newF = [];
 
         $crawlerF->filter('.column .feed a')->each( function (Crawler $newsAll) use (&$newsF) {
-            $new = [];
+            $newF = [];
             
-            $new['url']   = $newsAll->filter('a')->first()->attr('href');
-            $new['date']  = $newsAll->filter('p.date-time.is-hidden-mobile')->text();
-            $new['title'] = $newsAll->filter('p.head')->text();
+            $newF['url']   = $newsAll->filter('a')->first()->attr('href');
+            $newF['date']  = $newsAll->filter('p.date-time.is-hidden-mobile')->text();
+            $newF['title'] = $newsAll->filter('p.head')->text();
 
-            $newsF[] = $new;
+            $newsF[] = $newF;
         });
 
-        // dd($news);
-        return view('blog', compact('newsF'));
+        // El economista web scraping
+        $crawlerE = $client->request('GET', 'https://www.eleconomista.com.mx/');
+
+        $newE = [];
+
+        $crawlerE->filter('.entrys-con-banner.clearfix div.promocionado')->each( function (Crawler $newsAll) use (&$newsE) {
+            $newE = [];
+            
+            $newE['author'] = $newsAll->filter('p.entry-title')->text();
+            $newE['url'] = $newsAll->filter('div.entry-box-overlay a')->first()->attr('href');
+            $headtitle = $newsAll->children()->filter('.entry-data h3');
+            $a = $headtitle->eq(0);
+            $newE['title'] = $a->filter('a')->first()->attr('alt');
+
+            $newsE[] = $newE;
+        });
+        return view('blog', compact('newsF', 'newsE'));
     }
 }

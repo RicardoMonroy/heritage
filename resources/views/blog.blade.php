@@ -110,15 +110,15 @@
             </div>
             <div class="col-lg-5">
                 <div class="content-cards">
-                    @foreach ($newsF as $job)
+                    @foreach ($newsE as $new)
                         <div class="card-box main-title text-lg-left mb-lg-4 mr-lg-4 wow fadeInUp" data-wow-delay="300ms">
                             <span class="wow fadeInUp color-pink">El Economista</span>
-                            <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $job['date'] }} </h6>
-                            <h5 class="color-white wow fadeInUp" data-wow-delay="300ms"> {{ $job['title'] }}</h5>
+                            <h6 class="wow fadeInUp color-vlight-grey font-weight-light" data-wow-delay="400ms"> {{ $new['author'] }} </h6>
+                            <h5 class="color-white wow fadeInUp" data-wow-delay="300ms"> {{ $new['title'] }}</h5>
                             <!-- <p class="pb-4 wow fadeInUp" data-wow-delay="500ms"></p> -->
 
                             <div class="text-lg-right">
-                                <a href="https://www.elfinanciero.com.mx{{ $job['url'] }}" 
+                                <a href="https://www.eleconomista.com.mx{{ $new['url'] }}" 
                                     target="_blank" 
                                     class="btn-setting color-white btn-hvr-up btn-hvr-pink link wow fadeInUp" 
                                     data-wow-delay="700ms"
