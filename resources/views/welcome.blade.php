@@ -345,7 +345,22 @@
         </div>
     </div>
 </section>
-<!-- About Boxes ends -->
+
+<!-- About Video ends -->
+<section class="bg-dark2 p-0" id="video">
+    <div class="container-fluid p-0" style="width: 100%">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- 
+                    Introducir la identificación que YouTube proporciona (tal como tgbNymZ7vqY) cuando reproduzca un video. 
+                    Y pegar después de: embed/'idenficicación'
+                    Ejemplo: embed/tgI6PjEq0O8
+                -->
+                <iframe style="height: 100vh" src="https://www.youtube.com/embed/tgI6PjEq0O8"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Parallax One -->
 <div class="parallaxOne"></div>
