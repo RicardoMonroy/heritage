@@ -71,7 +71,10 @@ class ContactController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($id);
+        $contact = Contact::find($id);
+        $contact->update($request->all());
+
+        return redirect()->route('contact.edit', compact('contact'));
     }
 
     /**
