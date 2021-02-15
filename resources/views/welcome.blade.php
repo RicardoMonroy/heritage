@@ -351,8 +351,8 @@
     <div class="container-fluid p-0" style="width: 100%">
         <div class="row">
             <div class="col-md-12">
-                <!-- 
-                    Introducir la identificación que YouTube proporciona (tal como tgbNymZ7vqY) cuando reproduzca un video. 
+                <!--
+                    Introducir la identificación que YouTube proporciona (tal como tgbNymZ7vqY) cuando reproduzca un video.
                     Y pegar después de: embed/'idenficicación'
                     Ejemplo: embed/tgI6PjEq0O8
                 -->
@@ -949,34 +949,34 @@
 
                     <div class="text-center text-md-left">
                         <!--Address-->
-                        <p class="mb-2">Calle 123 Col. Centro , CDMX México. </p>
+                        <p class="mb-2">{{ $contact->address }} </p>
                         <!--Phone-->
-                        <p class="mb-2"> 
-                            Oficina: 55 123445678 
+                        <p class="mb-2">
+                            Oficina: {{ $contact->telephone_office }}
                             <br>
-                            Móvil: 5555000000 
+                            Móvil: {{ $contact->telephone }}
                         </p>
                         <!--Email-->
                         <p class="mb-2">
-                            Email: <a href="#" class="color-white">admin@heritage.com</a> 
+                            Email: <a href="#" class="color-white">{{ $contact->email_admin }}</a>
                             <br>
-                            Ventas: <a href="#" class="color-white">email@heritage.com</a>
+                            Ventas: <a href="#" class="color-white">{{ $contact->email_sales }}</a>
                         </p>
                         <!--Timing-->
-                        <p class="mb-0">Lun-Vie: 9am to 6pm</p>
+                        <p class="mb-0">{{ $contact->schedule }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 p-0 col-map box-shadow-map">
                 {{-- <div id="google-map" class="bg-light-gray map"></div> --}}
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.1171287085244!2d-100.40069438562224!3d20.58327378624133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b526dfd765d%3A0xf0ff77c7cd66a57e!2sWorks%20Coworking!5e0!3m2!1ses!2smx!4v1610563090033!5m2!1ses!2smx" 
-                    width="600" 
+                <iframe
+                    src="{{ $contact->url }}"
+                    width="600"
                     height="313"
-                    frameborder="0" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    aria-hidden="false" 
+                    frameborder="0"
+                    style="border:0;"
+                    allowfullscreen=""
+                    aria-hidden="false"
                     tabindex="0">
                 </iframe>
             </div>

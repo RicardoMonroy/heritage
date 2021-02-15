@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\About;
 use App\Company;
+use App\Contact;
 use App\Slider;
 use Goutte\Client;
 use Illuminate\Http\Request;
@@ -16,8 +17,9 @@ class LandingController extends Controller
         $slider = Slider::find(1);
         $about = About::find(1);
         $companies = Company::all();
+        $contact = Contact::find(1);
 
-        return view('welcome', compact('slider', 'about', 'companies'));
+        return view('welcome', compact('slider', 'about', 'companies', 'contact'));
     }
 
     public function blog(Client $client)
@@ -29,7 +31,7 @@ class LandingController extends Controller
 
         $crawlerF->filter('.column .feed a')->each( function (Crawler $newsAll) use (&$newsF) {
             $newF = [];
-            
+
             $newF['url']   = $newsAll->filter('a')->first()->attr('href');
             $newF['date']  = $newsAll->filter('p.date-time.is-hidden-mobile')->text();
             $newF['title'] = $newsAll->filter('p.head')->text();
@@ -44,7 +46,7 @@ class LandingController extends Controller
 
         $crawlerE->filter('.entrys-con-banner.clearfix div.promocionado')->each( function (Crawler $newsAll) use (&$newsE) {
             $newE = [];
-            
+
             $newE['author'] = $newsAll->filter('p.entry-title')->text();
             $newE['url'] = $newsAll->filter('div.entry-box-overlay a')->first()->attr('href');
             $headtitle = $newsAll->children()->filter('.entry-data h3');
