@@ -42,16 +42,16 @@
                             <div class="row">
                                 <div class="col-lg-7 col-md-12">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="h5">Título</label>
-                                        <input type="text" name="h5" id="h5" class="form-control" value="{{ $company->name }}" autofocus="">
+                                        <label class="form-control-label" for="name">Título</label>
+                                        <input type="text" name="name" id="name" class="form-control" value="{{ $company->name }}" autofocus="">
                                     </div>
                                     <div class="form-group">
-                                        <label class="form-control-label" for="h5">descripción</label>
-                                        <textarea name="" id="" rows="10" class="form-control">{{ $company->description }}</textarea>
+                                        <label class="form-control-label" for="description">descripción</label>
+                                        <textarea name="description" id="description" rows="10" class="form-control">{{ $company->description }}</textarea>
                                     </div>
                                     <div class="form-group">
-                                        <label class="form-control-label" for="h5">URL</label>
-                                        <input type="text" name="h5" id="h5" class="form-control" value="{{ $company->url }}" autofocus="">
+                                        <label class="form-control-label" for="url">URL</label>
+                                        <input type="text" name="url" id="url" class="form-control" value="{{ $company->url }}" autofocus="">
                                     </div>
                                 </div>
                                 <div class="col-lg-5 col-md-12">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Company;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CompaniesController extends Controller
 {
@@ -73,7 +74,23 @@ class CompaniesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $company= Company::find($id);
+        $company->update($request->all());
+
+        if( $request->picture ){
+            $file = $request->file('picture');
+            $name = str_replace(' ','-', $file->getClientOriginalName());
+            $path = 'Images/' . $name;
+            Storage::putFileAs('/public/' . 'Images/', $file, $name );
+            $company::whereId($id)->update([
+                'name' => $request->name,
+                'picture' => $path,
+                'description' => $request->description,
+                'url' => $request->url
+            ]);
+        }
+
+        return redirect()->route('companies.index', compact('company'));
     }
 
     /**

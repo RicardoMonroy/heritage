@@ -73,7 +73,10 @@ class MeetyouController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($id);
+        $meetyou = Meetyou::find($id);
+        $meetyou->update($request->all());
+
+        return redirect()->route('meetyous.edit', compact('meetyou'));
     }
 
     /**
