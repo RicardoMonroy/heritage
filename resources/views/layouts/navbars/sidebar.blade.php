@@ -137,11 +137,11 @@
                                     {{ __('Administración de usuarios') }}
                                 </a>
                             </li>
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('permissions.index') }}">
                                     {{ __('Permisos') }}
                                 </a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div>
                 </li>
