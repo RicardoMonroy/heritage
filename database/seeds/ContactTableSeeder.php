@@ -13,9 +13,9 @@ class ContactTableSeeder extends Seeder
     public function run()
     {
         DB::table('contacts')->insert([
-            'address' => 'Calle 123 Col. Centro , CDMX México.',
+            'address' => 'Av. Pdte. Masaryk 61, Polanco, Polanco V Secc, Miguel Hidalgo, 11560',
             'telephone' => '55 123445678',
-            'telephone_office' => '55 55000000',
+            'telephone_office' => '800 700 9393',
             'email_admin' => 'admin@heritage.com',
             'email_sales' => 'email@heritage.com',
             'schedule' => '9am to 6pm',

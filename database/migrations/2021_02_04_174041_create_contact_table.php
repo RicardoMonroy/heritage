@@ -16,12 +16,12 @@ class CreateContactTable extends Migration
         Schema::create('contacts', function (Blueprint $table) {
             $table->id();
 
-            $table->text('address');
-            $table->string('telephone');
-            $table->string('telephone_office');
-            $table->string('email_admin');
-            $table->string('email_sales');
-            $table->string('schedule');
+            $table->text('address')->nullable();
+            $table->string('telephone')->nullable();
+            $table->string('telephone_office')->nullable();
+            $table->string('email_admin')->nullable();
+            $table->string('email_sales')->nullable();
+            $table->string('schedule')->nullable();
             $table->text('url')->nullable();
 
             $table->timestamps();

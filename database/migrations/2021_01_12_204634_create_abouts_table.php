@@ -16,12 +16,12 @@ class CreateAboutsTable extends Migration
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
 
-            $table->string('picture');
-            $table->text('h5');
-            $table->text('h2');
-            $table->text('p1');
-            $table->text('p2');
-            $table->text('p3');
+            $table->string('picture')->nullable();
+            $table->text('h5')->nullable();
+            $table->text('h2')->nullable();
+            $table->text('p1')->nullable();
+            $table->text('p2')->nullable();
+            $table->text('p3')->nullable();
 
             $table->timestamps();
         });

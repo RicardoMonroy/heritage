@@ -15,11 +15,11 @@ class CreateMeetyousTable extends Migration
     {
         Schema::create('meetyous', function (Blueprint $table) {
             $table->id();
-            
+
             $table->string('title');
-            $table->text('goal_fisrt');
-            $table->text('goal_second');
-            $table->text('goal_third');
+            $table->text('goal_fisrt')->nullable();
+            $table->text('goal_second')->nullable();
+            $table->text('goal_third')->nullable();
 
             $table->timestamps();
         });
