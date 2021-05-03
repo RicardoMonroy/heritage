@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAboutsTable extends Migration
+class CreateMeetyousTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,13 @@ class CreateAboutsTable extends Migration
      */
     public function up()
     {
-        Schema::create('abouts', function (Blueprint $table) {
+        Schema::create('meetyous', function (Blueprint $table) {
             $table->id();
 
-            $table->string('picture')->nullable();
-            $table->text('h5')->nullable();
-            $table->text('h2')->nullable();
-            $table->text('p1')->nullable();
-            $table->text('p2')->nullable();
-            $table->text('p3')->nullable();
+            $table->string('title');
+            $table->text('goal_fisrt')->nullable();
+            $table->text('goal_second')->nullable();
+            $table->text('goal_third')->nullable();
 
             $table->timestamps();
         });
@@ -34,6 +32,6 @@ class CreateAboutsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('abouts');
+        Schema::dropIfExists('meetyous');
     }
 }

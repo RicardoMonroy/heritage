@@ -16,7 +16,7 @@
                 <ul class="slider-social banner-social d-flex">
                     <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-facebook-f"></i> </a></li>
                     <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-twitter"></i>  </a></li>
-                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-linkedin-in"></i> </a></li>
+                    <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-linkedin"></i> </a></li>
                     <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-instagram"></i> </a></li>
                 </ul>
             </div>
@@ -43,13 +43,13 @@
             </a>
             <div class="collapse navbar-collapse d-none d-lg-block">
                 <ul class="nav navbar-nav mx-auto">
-                    <li class="nav-item"> <a href="#home" class="scroll nav-link link">home</a></li>
-                    <li class="nav-item"> <a href="#about" class="scroll nav-link link">about</a></li>
-                    <li class="nav-item"> <a href="#business" class="scroll nav-link link">business</a></li>
+                    <li class="nav-item"> <a href="#home" class="scroll nav-link link">inicio</a></li>
+                    <li class="nav-item"> <a href="#about" class="scroll nav-link link">acerca de </a></li>
+                    <li class="nav-item"> <a href="#business" class="scroll nav-link link">negocio</a></li>
                     <li class="nav-item"> <a href="#team" class="scroll nav-link link">equipo</a></li>
-                    {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clients</a></li> --}}
-                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">blog</a></li>
-                    <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contact</a></li>
+                    {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clientes</a></li> --}}
+                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">noticias</a></li>
+                    <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contacto</a></li>
                 </ul>
             </div>
             <a href="javascript:void(0)" class="nav-btn-number btn-setting btn-hvr-up btn-hvr-whatsapp color-white mr-lg-3"><i class="fab fa-whatsapp"></i> +1 631 112 1134</a>
@@ -89,13 +89,13 @@
             </div>
             <nav class="side-nav m-0">
                 <ul class="navbar-nav flex-lg-row">
-                    <li class="nav-item"> <a href="#home" class="scroll nav-link link">home</a></li>
-                    <li class="nav-item"> <a href="#about" class="scroll nav-link link">about</a></li>
-                    <li class="nav-item"> <a href="#business" class="scroll nav-link link">business</a></li>
+                    <li class="nav-item"> <a href="#home" class="scroll nav-link link">inicio</a></li>
+                    <li class="nav-item"> <a href="#about" class="scroll nav-link link">acerca de</a></li>
+                    <li class="nav-item"> <a href="#business" class="scroll nav-link link">negocio</a></li>
                     <li class="nav-item"> <a href="#team" class="scroll nav-link link">equipo</a></li>
-                    {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clients</a></li> --}}
-                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">blog</a></li>
-                    <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contact</a></li>
+                    {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clientes</a></li> --}}
+                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">noticias</a></li>
+                    <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contacto</a></li>
                 </ul>
             </nav>
 
@@ -105,7 +105,7 @@
                     <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-instagram color-white"></i> </a> </li>
                     <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-twitter color-white"></i> </a> </li>
                 </ul>
-                <p class="text-white">&copy; 2021 Heritage. Made With Love by Tooring</p>
+                <p class="text-white mt-2 mb-2">&copy; {{ now()->year }} Heritage. Hecho con <span style="color:red;">&#10084;</span> por <a href="#" style="color:white;" onMouseOver="this.style.color='black'" onMouseOut="this.style.color='white'">Tooring</a></p>
             </div>
         </div>
     </div>
@@ -271,7 +271,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row mx-auto">
             @foreach ($companies as $company)
                 <div class="col-md-3 col-sm-6 p-0">
                     <div class="card flip-card">
@@ -345,26 +345,44 @@
         </div>
     </div>
 </section>
-<!-- About Boxes ends -->
+
+<!-- About Video ends -->
+<section class="bg-dark2 p-0" id="video">
+    <div class="container-fluid p-0" style="width: 100%">
+        <div class="row">
+            <div class="col-md-12">
+                <!--
+                    Introducir la identificación que YouTube proporciona (tal como tgbNymZ7vqY) cuando reproduzca un video.
+                    Y pegar después de: embed/'idenficicación'
+                    Ejemplo: embed/tgI6PjEq0O8
+                -->
+                <iframe style="height: 100vh" src="https://www.youtube.com/embed/tgI6PjEq0O8"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Parallax One -->
 <div class="parallaxOne"></div>
-<div class="row" id="enfoque">
+<div class="row">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <br><br><br>
+            <div class="col-md-6 my-5">
                 <img class="zoom" src="{{ asset('/agency/img/parallaxLeft.jpeg') }}" alt="" width="100%">
-                <br><br><br>
             </div>
-            <div class="col-md-6" style="margin-top: 12%">
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Nuestro enfoque para tu seguridad</strong></li>
-                    <li class="list-group-item">Calidez y asesoría financiera</li>
-                    <li class="list-group-item">Inteligencia Financiera</li>
-                    <li class="list-group-item">Expertise en portafolio de alto rendimiento</li>
-                </ul>
-                <br><br>
+            <div class="col-md-6 m-auto px-0">
+                <div class="main-title wow fadeIn text-white m-auto" data-wow-delay="300ms">
+                    <h4 class="mb-5 font-weight-normal">Nuestro enfoque para tu  <span class="color-pink">seguridad</span> </h4>
+                </div>
+                <div class="main-title wow fadeIn text-white m-auto" data-wow-delay="300ms">
+                    <h4 class="mb-5 font-weight-normal">Calidez y asesoría <span class="color-pink">financiera</span> </h4>
+                </div>
+                <div class="main-title wow fadeIn text-white m-auto" data-wow-delay="300ms">
+                    <h4 class="mb-5 font-weight-normal">Inteligencia <span class="color-pink">Financiera</span> </h4>
+                </div>
+                <div class="main-title wow fadeIn text-white m-auto" data-wow-delay="300ms">
+                    <h4 class="font-weight-normal">Expertise en portafolio de alto <span class="color-pink">rendimiento</span> </h4>
+                </div>
             </div>
         </div>
     </div>
@@ -635,8 +653,8 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-66px mt-xs-4rem">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-xs-5 wow fadeInUp">
+        <div class="row mt-6 mt-xs-4rem">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center mb-5 wow fadeInUp">
                 <div class="pricing-item hvr-bg-terracota">
                     <div class="price-box clearfix">
                         <div class="price_title">
@@ -925,31 +943,42 @@
         <div class="row mx-lg-0">
             <div class="col-lg-6 col-md-6 col-sm-12 p-0">
                 <div class="contact-box bg-dark2">
-                    <div class="main-title text-center text-md-left mb-4">
-                        <h2 class="font-weight-normal">Contáctanos </h2>
+                    <div class="main-title text-center text-md-left mb-0">
+                        <h2 class="font-weight-normal mb-3">Contáctanos </h2>
                     </div>
 
                     <div class="text-center text-md-left">
-
                         <!--Address-->
-                        <p class="mb-3">Calle 123 Col. Centro , CDMX México. </p>
-
+                        <p class="mb-2">{{ $contact->address }} </p>
                         <!--Phone-->
-                        <p class="mb-3"> Oficina : 55 123445678 <br>
-                            Móvil : 5555000000 </p>
-
+                        <p class="mb-2">
+                            Oficina: {{ $contact->telephone_office }}
+                            <br>
+                            Móvil: {{ $contact->telephone }}
+                        </p>
                         <!--Email-->
-                        <p class="mb-3"> Email: <a href="#" class="color-white">admin@heritage.com</a> <br>
-                            Ventas: <a href="#" class="color-white">email@heritage.com</a> </p>
-
+                        <p class="mb-2">
+                            Email: <a href="#" class="color-white">{{ $contact->email_admin }}</a>
+                            <br>
+                            Ventas: <a href="#" class="color-white">{{ $contact->email_sales }}</a>
+                        </p>
                         <!--Timing-->
-                        <p class="mb-0">Lun-Vie: 9am to 6pm</p>
+                        <p class="mb-0">{{ $contact->schedule }}</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 p-0 col-map box-shadow-map">
                 {{-- <div id="google-map" class="bg-light-gray map"></div> --}}
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.1171287085244!2d-100.40069438562224!3d20.58327378624133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d35b526dfd765d%3A0xf0ff77c7cd66a57e!2sWorks%20Coworking!5e0!3m2!1ses!2smx!4v1610563090033!5m2!1ses!2smx" width="600" height="415" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe
+                    src="{{ $contact->url }}"
+                    width="600"
+                    height="313"
+                    frameborder="0"
+                    style="border:0;"
+                    allowfullscreen=""
+                    aria-hidden="false"
+                    tabindex="0">
+                </iframe>
             </div>
         </div>
     </div>

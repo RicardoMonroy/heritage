@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Company;
+use App\Meetyou;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class CompaniesController extends Controller
+class MeetyouController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,9 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        $companies = Company::all();
+        $meetyous = Meetyou::all();
 
-        return view('companies.index', compact('companies'));
+        return view('meetyous.index', compact('meetyous'));
     }
 
     /**
@@ -60,9 +59,9 @@ class CompaniesController extends Controller
      */
     public function edit($id)
     {
-        $company = Company::find($id);
+        $meetyou = Meetyou::find($id);
 
-        return view('companies.edit', compact('company'));
+        return view('meetyous.edit', compact('meetyou'));
     }
 
     /**
@@ -74,23 +73,10 @@ class CompaniesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company= Company::find($id);
-        $company->update($request->all());
+        $meetyou = Meetyou::find($id);
+        $meetyou->update($request->all());
 
-        if( $request->picture ){
-            $file = $request->file('picture');
-            $name = str_replace(' ','-', $file->getClientOriginalName());
-            $path = 'Images/' . $name;
-            Storage::putFileAs('/public/' . 'Images/', $file, $name );
-            $company::whereId($id)->update([
-                'name' => $request->name,
-                'picture' => $path,
-                'description' => $request->description,
-                'url' => $request->url
-            ]);
-        }
-
-        return redirect()->route('companies.index', compact('company'));
+        return redirect()->route('meetyous.edit', compact('meetyou'));
     }
 
     /**

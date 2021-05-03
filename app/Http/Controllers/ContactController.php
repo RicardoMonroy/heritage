@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Company;
+use App\Contact;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 
-class CompaniesController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class CompaniesController extends Controller
      */
     public function index()
     {
-        $companies = Company::all();
-
-        return view('companies.index', compact('companies'));
+        //
     }
 
     /**
@@ -60,9 +57,9 @@ class CompaniesController extends Controller
      */
     public function edit($id)
     {
-        $company = Company::find($id);
+        $contact = Contact::find($id);
 
-        return view('companies.edit', compact('company'));
+        return view('contact.edit', compact('contact'));
     }
 
     /**
@@ -74,23 +71,10 @@ class CompaniesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $company= Company::find($id);
-        $company->update($request->all());
+        $contact = Contact::find($id);
+        $contact->update($request->all());
 
-        if( $request->picture ){
-            $file = $request->file('picture');
-            $name = str_replace(' ','-', $file->getClientOriginalName());
-            $path = 'Images/' . $name;
-            Storage::putFileAs('/public/' . 'Images/', $file, $name );
-            $company::whereId($id)->update([
-                'name' => $request->name,
-                'picture' => $path,
-                'description' => $request->description,
-                'url' => $request->url
-            ]);
-        }
-
-        return redirect()->route('companies.index', compact('company'));
+        return redirect()->route('contact.edit', compact('contact'));
     }
 
     /**

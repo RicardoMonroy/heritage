@@ -21,5 +21,32 @@ class UsersTableSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'Admin Tooring',
+            'email' => 'corporativo@tooring.com.mx',
+            'email_verified_at' => now(),
+            'password' => Hash::make('Tooring@2021'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Erick Estrada',
+            'email' => 'erickestrada9701@gmail.com',
+            'email_verified_at' => now(),
+            'password' => Hash::make('Enola21'),
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('users')->insert([
+            'name' => 'Gerardo Lopez',
+            'email' => 'glf@capitalamigo.mx',
+            'email_verified_at' => now(),
+            'password' => '$2y$10$mIgN8rb3X.3WVOzDIhvlQeOC.1lOHbIqYSJYJsvcAnpplqz4qUBiS',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

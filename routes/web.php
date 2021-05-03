@@ -30,5 +30,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('slider', 'SliderController');
     Route::resource('about', 'AboutController');
     Route::resource('companies', 'CompaniesController');
+    Route::resource('meetyous', 'MeetyouController');
+    Route::resource('contact', 'ContactController');
 });
 

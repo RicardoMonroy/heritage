@@ -28,9 +28,9 @@
                         <div class="col-8">
                             <h3 class="mb-0">Usuarios</h3>
                         </div>
-                        <div class="col-4 text-right">
+                        {{-- <div class="col-4 text-right">
                             <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">Nuevo usuario</a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -44,8 +44,8 @@
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Rol</th>
-                                <th scope="col">Creation Date</th>
-                                <th scope="col"></th>
+                                <th scope="col">Creado</th>
+                                {{-- <th scope="col"></th> --}}
                             </tr>
                         </thead>
                         <tbody>
@@ -57,7 +57,7 @@
                                     </td>
                                     <td>Admin</td>
                                     <td>{{ $user->created_at }}</td>
-                                    <td class="text-right">
+                                    {{-- <td class="text-right">
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v"></i>
@@ -66,7 +66,7 @@
                                                     <a class="dropdown-item" href="">Edit</a>
                                             </div>
                                         </div>
-                                    </td>
+                                    </td> --}}
                                 </tr>
                             @endforeach
                         </tbody>
