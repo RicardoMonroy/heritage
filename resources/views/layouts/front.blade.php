@@ -79,7 +79,7 @@
                     {{-- <li><a href="#" class="wow fadeInDown pinterest"><i class="fab fa-pinterest-p"></i> </a> </li> --}}
                     <li><a href="{{ route('login') }}" class="wow fadeInDown pinterest"><i class="fas fa-sign-in-alt"></i> </a> </li>
                 </ul>
-                <p class="copyrights mt-2 mb-2">&copy; {{ now()->year }} Heritage. Hecho con <span style="color:red;">&#10084;</span> por <a href="#">Tooring</a></p>
+                <p class="copyrights mt-2 mb-2">&copy; {{ now()->year }} Heritage. Hecho con <span style="color:red;">&#10084;</span> por <a href="#">Tooring</a></p>.  <a style="color:white;" href="{{asset('agency/Aviso_de_Privacidad_Heritage.pdf')}}" target="_blank">Aviso de Privacidad</a>
             </div>
         </div>
     </div>
