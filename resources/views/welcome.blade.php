@@ -267,81 +267,115 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="main-title wow fadeIn" data-wow-delay="300ms">
-                    <h2>Nuestras <span class="color-pink">Soluciones</span> </h2>
+                    <h2>Experiencia <span class="color-pink"></span> </h2>
                 </div>
             </div>
         </div>
         <div class="row mx-auto">
-            @foreach ($companies as $company)
-                <div class="col-md-3 col-sm-6 p-0">
-                    <div class="card flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front"><!-- frente de la tarjeta -->
-                                <img src="{{ asset('storage/'.$company->picture ) }}" alt="imagen"><!-- Imagen frontal -->
-                            </div>
-                            <div class="flip-card-back"><!-- reverso de la tarjeta -->
-                                <div class="row no-gutters">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ $company->name }}</h5>
-                                        <p class="card-text pl-2 mt-2">{{ $company->description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-            {{-- <div class="col-md-3 col-sm-6 p-0">
+            
+            <div class="col-md-2 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->
-                            <img src="{{ asset('agency/img/Business-Capital.png') }}" alt="imagen"><!-- Imagen frontal -->
+                            <img src="{{ asset('agency/img/Card-anos-experiencia.png') }}" alt="imagen"><!-- Imagen frontal -->
                         </div>
                         <div class="flip-card-back"><!-- reverso de la tarjeta -->
                             <div class="row no-gutters">
                                 <div class="card-body">
-                                    <h5 class="card-title">Capital Amigo</h5>
-                                    <p class="card-text pl-2 mt-2">Capital Amigo es un fondo diversificado de capital privado. Contamos con sólidas plataformas para invertir en el desarrollo, construcción, operación y adquisición de activos inmobiliarios. Contamos con experiencia probada en organización, estructuración, desarrollo y monetización.</p>
+                                    <h5 class="card-title">Años de experiencia</h5>
+                                    <p class="card-text pl-2 mt-2">Desarrollamos una estrategia probada para invertir y capturar valor potencial de las inversiones.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 p-0">
+            <div class="col-md-2 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->
-                            <img src="{{ asset('agency/img/Business-Cree.png') }}" alt="imagen"><!-- Imagen frontal -->
+                            <img src="{{ asset('agency/img/Card-pionero-mercado.png') }}" alt="imagen"><!-- Imagen frontal -->
                         </div>
                         <div class="flip-card-back"><!-- reverso de la tarjeta -->
                             <div class="row no-gutters">
                                 <div class="card-body">
-                                    <h5 class="card-title">Credito</h5>
-                                    <p class="card-text pl-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui tellus, maximus ac lacinia vitae, hendrerit sed tellus. Quisque mattis nec tellus eu vehicula. Donec posuere egestas leo, a condimentum velit molestie vitae. Etiam neque nisl, faucibus nec consequat eu, aliquam a sapien. Maecenas finibus neque nec eros sollicitudin gravida. Phasellus et ultrices justo. Praesent dignissim pellentesque pretium. Nam tempus nunc laoreet luctus blandit. Cras feugiat nec mi ac fringilla.</p>
+                                    <h5 class="card-title">Pioneros del mercado medio en México</h5>
+                                    <p class="card-text pl-2 mt-2">Fuimos pioneros en el sector de capital privado de los espectáculos en México apostando por su potencial.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-6 p-0">
+            <div class="col-md-2 col-sm-6 p-0">
                 <div class="card flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front"><!-- frente de la tarjeta -->
-                            <img src="{{ asset('agency/img/Business-Heritage.png') }}" alt="imagen"><!-- Imagen frontal -->
+                            <img src="{{ asset('agency/img/Card-estrategia-capital.png') }}" alt="imagen"><!-- Imagen frontal -->
                         </div>
                         <div class="flip-card-back"><!-- reverso de la tarjeta -->
                             <div class="row no-gutters">
                                 <div class="card-body">
-                                    <h5 class="card-title">Heritage Capital</h5>
-                                    <p class="card-text pl-2 mt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui tellus, maximus ac lacinia vitae, hendrerit sed tellus. Quisque mattis nec tellus eu vehicula. Donec posuere egestas leo, a condimentum velit molestie vitae. Etiam neque nisl, faucibus nec consequat eu, aliquam a sapien. Maecenas finibus neque nec eros sollicitudin gravida. Phasellus et ultrices justo. Praesent dignissim pellentesque pretium. Nam tempus nunc laoreet luctus blandit. Cras feugiat nec mi ac fringilla.</p>
+                                    <h5 class="card-title">Estrategia de capital de crecimiento</h5>
+                                    <p class="card-text pl-2 mt-2">Implementamos un enfoque de valor agregado sistematizado para lograr el potencial de los rendimientos esperados.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> --}}
+            </div>
+            <div class="col-md-2 col-sm-6 p-0">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><!-- frente de la tarjeta -->
+                            <img src="{{ asset('agency/img/Card-asociacion-plazo.png') }}" alt="imagen"><!-- Imagen frontal -->
+                        </div>
+                        <div class="flip-card-back"><!-- reverso de la tarjeta -->
+                            <div class="row no-gutters">
+                                <div class="card-body">
+                                    <h5 class="card-title">Asociación a largo plazo</h5>
+                                    <p class="card-text pl-2 mt-2">Alineamos intereses y valores comunes para asegurar la creación de valor con una visión común para la empresa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 p-0">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><!-- frente de la tarjeta -->
+                            <img src="{{ asset('agency/img/Card-experiencia-en-transacciones.png') }}" alt="imagen"><!-- Imagen frontal -->
+                        </div>
+                        <div class="flip-card-back"><!-- reverso de la tarjeta -->
+                            <div class="row no-gutters">
+                                <div class="card-body">
+                                    <h5 class="card-title">Experiencia en transacciones</h5>
+                                    <p class="card-text pl-2 mt-2">Tenemos un flujo de transacciones fuerte y constante, lo que nos permite ser activamente selectivos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 p-0">
+                <div class="card flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front"><!-- frente de la tarjeta -->
+                            <img src="{{ asset('agency/img/Card-posicion-de-liderazgo.png') }}" alt="imagen"><!-- Imagen frontal -->
+                        </div>
+                        <div class="flip-card-back"><!-- reverso de la tarjeta -->
+                            <div class="row no-gutters">
+                                <div class="card-body">
+                                    <h5 class="card-title">Posición de liderazgo</h5>
+                                    <p class="card-text pl-2 mt-2">Desarrollamos una posición de liderazgo local como resultado de nuestra capacidad de ejecución y trayectoria exitosa.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>
@@ -405,8 +439,10 @@
         <div class="row">
             <div class="col-lg-6 pl-6">
                 <div class="main-title text-lg-left offset-md-1 mb-0 wow fadeInUp" data-wow-delay="300ms">
-                    <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms"> 25 años de experiencia en el medio financiero</h2>
-                    <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms"> Adminisgtración de activos de 10 millones de USD</h2>
+                    <br><br>
+                    <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms"> <ul><li>Andrés Romero</li></ul></h2>
+                    <br><br>
+                    <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms"> <ul><li>Gerardo López</li></ul></h2>
                 </div>
             </div>
             <div class="col-lg-6 pr-5 mb-5 mb-lg-0 wow fadeInLeft">
@@ -909,7 +945,40 @@
 <!-- Clients ends -->
 
 <!-- Blog start -->
-<section id="blog" class="half-section p-0 bg-change bg-terracota">
+<section class="bg-dark2" id="blog">
+    <div class="container-fluid p-0" style="width: 100%">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="main-title wow fadeIn" data-wow-delay="300ms">
+                    <h2>Portafolio <span class="color-pink"></span> </h2>
+                </div>
+            </div>
+        </div>
+        <div class="row mx-auto">
+            @foreach ($companies as $company)
+                <div class="col-md-3 col-sm-6 p-0">
+                    <div class="card flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="{{ asset('storage/'.$company->picture ) }}" alt="imagen">
+                            </div>
+                            <div class="flip-card-back">
+                                <div class="row no-gutters">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $company->name }}</h5>
+                                        <p class="card-text pl-2 mt-2">{{ $company->description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+<!-- <section id="blog" class="half-section p-0 bg-change bg-terracota">
     <h2 class="d-none">heading</h2>
     <div class="container-fluid">
         <div class="row align-items-center">
@@ -934,7 +1003,7 @@
 
         </div>
     </div>
-</section>
+</section> -->
 <!-- Blog ends -->
 
 <!-- Contact & Map starts -->
