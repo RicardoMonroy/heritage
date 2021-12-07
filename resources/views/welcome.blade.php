@@ -437,7 +437,47 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6 pl-6">
+        <div class="container">
+        <div class="row inner-team-sec padding-top padding-bottom">
+            <div class="col-12 col-lg-4 text-center text-lg-left">
+                <div class="team-detail wow fadeInLeft">
+                    <h4 class="heading">NUESTRO <span>EQUIPO</span></h4>
+                    <p class="text">
+                        Nuestro equipo cuenta con el conocimiento, la trayectoria y las relaciones necesarias para instrumentar cualquier financiamiento público o privado, así como para instrumentar cualquier transacción de fusión o adquisición (M&A).
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="team-box">
+                            <div class="img-holder position-relative">
+                                <img src="{{ asset('/agency/img/team/team1.jpg') }}">
+                            </div>
+                            <div class="team-info">
+                                <h4 class="team-name">Andrés Romero Arias</h4>
+                                <p class="team-designation">Partner | Banca de Inversión | <a class="facebook-text-hvr" href="https://www.linkedin.com/in/andr%C3%A9s-romero-b064952b/"><i class="fab fa-linkedin"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="team-box">
+                            <div class="img-holder position-relative">
+                                <img src="{{ asset('agency/img/team/team2.jpg') }}">
+                            </div>
+                            <div class="team-info">
+                                <h4 class="team-name">Gerardo López Flores</h4>
+                                <p class="team-designation">Partner | Banca de Inversión | <a class="facebook-text-hvr" href="https://www.linkedin.com/in/mba-gerardo-lopez/"><i class="fab fa-linkedin"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            <!-- <div class="col-lg-6 pl-6">
                 <div class="main-title text-lg-left offset-md-1 mb-0 wow fadeInUp" data-wow-delay="300ms">
                     <br><br>
                     <h2 class="wow fadeInUp font-weight-light" data-wow-delay="400ms"> <ul><li>Andrés Romero</li></ul></h2>
@@ -448,7 +488,7 @@
             <div class="col-lg-6 pr-5 mb-5 mb-lg-0 wow fadeInLeft">
                 <div class="rare-box"></div>
                 <img src="{{ asset('agency/img/moreInfo.jpeg') }}" class="about-img-small position-relative w-100" alt="">
-            </div>
+            </div> -->
         </div>
     </div>
 </section>
