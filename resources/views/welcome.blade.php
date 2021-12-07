@@ -48,7 +48,7 @@
                     <li class="nav-item"> <a href="#business" class="scroll nav-link link">negocio</a></li>
                     <li class="nav-item"> <a href="#team" class="scroll nav-link link">equipo</a></li>
                     {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clientes</a></li> --}}
-                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">noticias</a></li>
+                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">portafolio</a></li>
                     <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contacto</a></li>
                 </ul>
             </div>
@@ -94,7 +94,7 @@
                     <li class="nav-item"> <a href="#business" class="scroll nav-link link">negocio</a></li>
                     <li class="nav-item"> <a href="#team" class="scroll nav-link link">equipo</a></li>
                     {{-- <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clientes</a></li> --}}
-                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">noticias</a></li>
+                    <li class="nav-item"> <a href="#blog" class="scroll nav-link link">portafolio</a></li>
                     <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contacto</a></li>
                 </ul>
             </nav>
@@ -995,7 +995,7 @@
             </div>
         </div>
         <div class="row mx-auto">
-            @foreach ($companies as $company)
+            <!-- @foreach ($companies as $company)
                 <div class="col-md-3 col-sm-6 p-0">
                     <div class="card flip-card">
                         <div class="flip-card-inner">
@@ -1013,7 +1013,19 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+            @endforeach -->
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="agency/img/portfolio/BridgeBank.png" alt="">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="agency/img/portfolio/CapitalAmigo.png" alt="">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="agency/img/portfolio/MusicVibe.png" alt="">
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="agency/img/portfolio/InterDipce.png" alt="">
+            </div>
         </div>
     </div>
 </section>
