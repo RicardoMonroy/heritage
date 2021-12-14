@@ -1014,16 +1014,16 @@
                     </div>
                 </div>
             @endforeach -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <!-- <div class="col-lg-3 col-md-6 col-sm-12">
                 <img src="agency/img/portfolio/BridgeBank.png" alt="">
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            </div> -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <img src="agency/img/portfolio/CapitalAmigo.png" alt="">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <img src="agency/img/portfolio/MusicVibe.png" alt="">
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12">
                 <img src="agency/img/portfolio/InterDipce.png" alt="">
             </div>
         </div>
